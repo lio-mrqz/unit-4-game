@@ -18,8 +18,20 @@ function randomNumberGen() {
 function gemNumberGen() {
     var x = Math.floor((Math.random() * 12) + 1);
      return x;
-  };
+};
 
+function reset() {
+    score = 0;
+    randomNumber = randomNumberGen();
+    gem1 = gemNumberGen();
+    gem2 = gemNumberGen();
+    gem3 = gemNumberGen();
+    gem4 = gemNumberGen();
+    console.log("reset");
+    console.log(gem1,gem2,gem3,gem4);
+};
+
+// Value generators
 randomNumber = randomNumberGen();
 gem1 = gemNumberGen();
 gem2 = gemNumberGen();
@@ -32,13 +44,13 @@ gem4 = gemNumberGen();
 // 3:4
 if ((gem1 === gem2) || (gem1 === gem3) || (gem1 === gem4)){
     console.log(gem1,gem2,gem3,gem4);
-    randomNumberGen()
+    gemNumberGen()
 } else if ((gem2 === gem3) || (gem2 === gem4)) {
     console.log(gem2,gem3,gem4);
-    randomNumberGen()
+    gemNumberGen()
 } else if (gem3 === gem4) {
     console.log(gem3,gem4);
-    randomNumberGen()
+    gemNumberGen()
 } else {console.log(gem1,gem2,gem3,gem4)};
 
 // Buttons
@@ -61,4 +73,20 @@ $("#crystal4").click(function() {
     score = gem4 + score;
     console.log(score)
 });
-console.log(score)
+
+
+// Game conditions
+$(document).click( function(){
+if (randomNumber == score) {
+    wins++;
+    reset();
+    console.log("win")
+} else if (randomNumber < score) {
+    losses++;
+    reset();
+    console.log("lose")
+} else {gameOver = false; console.log("notDone")}
+});
+
+console.log(score);
+console.log(randomNumber + " randomNumber")
