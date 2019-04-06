@@ -74,7 +74,6 @@ $("#crystal4").click(function() {
     console.log(score)
 });
 
-
 // Game conditions
 $(document).click( function(){
 if (randomNumber == score) {
@@ -86,7 +85,10 @@ if (randomNumber == score) {
     reset();
     console.log("lose")
 } else {gameOver = false; console.log("notDone")}
-});
-
-console.log(score);
-console.log(randomNumber + " randomNumber")
+;
+// Value display
+$("#randomNumberText").text(randomNumber);
+$("#scoreText").text(score);
+$("#winsText").text(wins);
+$("#lossesText").text(losses);}
+);
