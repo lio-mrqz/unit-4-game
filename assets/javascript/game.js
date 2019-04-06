@@ -22,5 +22,43 @@ function gemNumberGen() {
 
 randomNumber = randomNumberGen();
 gem1 = gemNumberGen();
-console.log(randomNumber);
-console.log(gem1)
+gem2 = gemNumberGen();
+gem3 = gemNumberGen();
+gem4 = gemNumberGen();
+
+// Need an if statement declaring that none of the gems will repeat in value. 
+// 1:2-3-4;
+// 2:3-4; 
+// 3:4
+if ((gem1 === gem2) || (gem1 === gem3) || (gem1 === gem4)){
+    console.log(gem1,gem2,gem3,gem4);
+    randomNumberGen()
+} else if ((gem2 === gem3) || (gem2 === gem4)) {
+    console.log(gem2,gem3,gem4);
+    randomNumberGen()
+} else if (gem3 === gem4) {
+    console.log(gem3,gem4);
+    randomNumberGen()
+} else {console.log(gem1,gem2,gem3,gem4)};
+
+// Buttons
+$("#crystal1").click(function() {
+    score = gem1 + score;
+    console.log(score)
+});
+
+$("#crystal2").click(function() {
+    score = gem2 + score;
+    console.log(score)
+});
+
+$("#crystal3").click(function() {
+    score = gem3 + score;
+    console.log(score)
+});
+
+$("#crystal4").click(function() {
+    score = gem4 + score;
+    console.log(score)
+});
+console.log(score)
