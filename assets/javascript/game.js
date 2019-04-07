@@ -38,6 +38,12 @@ gem2 = gemNumberGen();
 gem3 = gemNumberGen();
 gem4 = gemNumberGen();
 
+// Images
+$("#crystal1").append('<img src="assets/images/sapphire.jpg" style="width:100px; height:100px"/>');
+$("#crystal2").append('<img src="assets/images/Emerald-Main.jpg" style="width:100px; height:100px"/>');
+$("#crystal3").append('<img src="assets/images/gemethyst-332162d20176631554.jpg" style="width:100px; height:100px"/>');
+$("#crystal4").append('<img src="assets/images/Ruby_gem.jpg" style="width:100px; height:100px"/>');
+
 // Need an if statement declaring that none of the gems will repeat in value. 
 // 1:2-3-4;
 // 2:3-4; 
@@ -87,8 +93,8 @@ if (randomNumber == score) {
 } else {gameOver = false; console.log("notDone")}
 ;
 // Value display
-$("#randomNumberText").text(randomNumber);
-$("#scoreText").text(score);
-$("#winsText").text(wins);
-$("#lossesText").text(losses);}
+$("#randomNumberText").text("Goal: " + randomNumber);
+$("#scoreText").text("Gem Total: " + score);
+$("#winsText").text(" Wins: " + wins);
+$("#lossesText").text(" Lost: " + losses);}
 );

@@ -11,24 +11,44 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
+    <!-- CSS -->
     <link rel="stylesheets" href="assets/css/reset.css">
     <!-- Favicon -->
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA8+v/AHtHUwDHm58Ak19nAF8vOwAPDw8A47+/AP/n5wCve4MARx8rAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYGBgYAAAAAAAAAAAAAAAYCBAMDBgAAAAAAAAAAAAYKCgIEAwcGAAAAAAAAAAYECgoCBAkDAwYAAAAAAAYEBwMECQMHAwMHBgAAAAAGAwEHCgUCCQgDAQYAAAAABgcIBwUCAwMHCQcGAAAAAAYIAQcCCQMJBwkDBgAAAAAGCAEHAgkDBAMEAwYAAAAABgEBCAkJAgIDBAkGAAAAAAYIAQgHCQIFBwQCBgAAAAAABgEBBwcDCQkEBgAAAAAAAAAGAQEHBwkEBgAAAAAAAAAAAAYICAMDBgAAAAAAAAAAAAAABgYGBgAAAAAAAP//AAD8PwAA+B8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAOAHAADwDwAA+B8AAPw/AAA=" rel="icon" type="image/x-icon" />
     <title>Crystal Collector</title>
   </head>
   <body>
-    <h1>Crystal Collector!</h1>
-    <p id="instructions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam id labore dicta sit voluptatibus!</p>
-    <p id="randomNumberText"></p>
-    <p id="scoreText"></p>
-    <button id="crystal1"></button>
-    <button id="crystal2"></button>
-    <button id="crystal3"></button>
-    <button id="crystal4"></button>
-    <p id="winsText" class="fas fa-trophy"></p>
-    <p id="lossesText" class="fas fa-dizzy"></p>
-
+    <div class="container text-center" style="background-color: rgb(160, 189, 216)">
+        <div class="jumbotron jumbotron-fluid bg-primary">
+            <div class="container">
+              <h1 class="display-3 font-weight-bold">Crystal Collector!</h1>
+              <hr class="my-4">
+              <p class="lead font-weight-bold">Can you add the gems until they match the goal?</p>
+            </div>
+          </div>
+      <div class="row">
+        <div class="col-med-12 col-lg-12">
+          <p id="randomNumberText" class="text-success display-4">Goal</p>
+          <p id="scoreText" class="text-info h3">Gem Total</p>
+        </div>
+      </div>
+      <div class="row" style="margin:25px">
+        <div class="col-xs-12 col-med-12 col-lg-12">
+          <button id="crystal1"></button>
+          <button id="crystal2"></button>
+          <button id="crystal3"></button>
+          <button id="crystal4"></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-med-12 col-lg-12">
+          <p id="winsText" class="fas fa-trophy"> Wins</p>
+        </div>
+        <div class="col-med-12 col-lg-12">
+          <p id="lossesText" class="fas fa-dizzy"> Lost</p>
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
